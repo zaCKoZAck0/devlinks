@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Providers } from "./providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const instrumentSansBold = localFont({
+  src: "./fonts/InstrumentSans-Bold.ttf",
+  variable: "--instrument-sans-bold",
+  weight: "700",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const instrumentSansSemiBold = localFont({
+  src: "./fonts/InstrumentSans-SemiBold.ttf",
+  variable: "--instrument-sans-semibold",
+  weight: "600",
+});
+const instrumentSansRegular = localFont({
+  src: "./fonts/InstrumentSans-Regular.ttf",
+  variable: "--instrument-sans-regular",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,11 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <Providers>
+        <body
+          className={`${instrumentSansBold.variable} ${instrumentSansSemiBold.variable} ${instrumentSansRegular.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </Providers>
     </html>
   );
 }
