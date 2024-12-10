@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 // import { AppDispatch, RootState } from "~/state/store";
 // import { useSelector, useDispatch } from "react-redux";
 // import {
@@ -23,19 +23,19 @@
 // }
 //
 //
-import { auth } from "~/auth";
+import { signOut } from "~/auth";
 import { Button } from "~/components/ui/button";
 
-const Protected = async () => {
-  const session = await auth();
-
+const Protected = () => {
   return (
     <form className="h-screen w-screen flex flex-col justify-center items-center gap-10">
-      <div>
-        <p className="">{session?.user?.name}</p>
-        <p className="">{session?.user?.email}</p>
-      </div>
-      <Button type="submit" className="w-40" variant="secondary">
+      <div></div>
+      <Button
+        type="button"
+        onClick={async () => await signOut()}
+        className="w-40"
+        variant="secondary"
+      >
         logout
       </Button>
     </form>
