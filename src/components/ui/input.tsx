@@ -11,6 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="relative w-full flex items-center">
         {/* Icon */}
+        {props.icon && <div className="absolute left-4">{props.icon}</div>}
 
         {/* Input */}
         <input
