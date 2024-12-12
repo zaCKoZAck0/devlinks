@@ -31,13 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <body
-          className={`${instrumentSansBold.variable} ${instrumentSansSemiBold.variable} ${instrumentSansRegular.variable} antialiased flex flex-col h-screen`}
-        >
-          {children}
-        </body>
-      </Providers>
+      <body
+        className={`${instrumentSansBold.variable} ${instrumentSansSemiBold.variable} ${instrumentSansRegular.variable} antialiased flex flex-col h-screen`}
+      >
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
