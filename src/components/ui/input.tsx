@@ -11,16 +11,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="relative w-full flex items-center">
         {/* Icon */}
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
-          {props.icon}
-        </span>
 
         {/* Input */}
         <input
           type={type}
           className={cn(
-            "flex h-12 w-full text-lg rounded-md border bg-transparent pl-10 pr-3 focus-visible:shadow-[0_0_20px_#BEADFF] placeholder:text-foreground/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-none transition-all",
+            "flex h-12 w-full md:text-lg text-base rounded-md border bg-card p-4 focus-visible:shadow-[0_0_20px_#BEADFF] placeholder:text-foreground/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-none transition-all",
             "peer", // Used for pseudo-class styling
+            props.icon ? "pl-12" : "pl-4",
             error
               ? "peer-invalid border-destructive text-destructive"
               : "peer-valid",

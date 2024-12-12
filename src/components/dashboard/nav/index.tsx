@@ -22,7 +22,7 @@ export function Navbar() {
           </NavLink>
         </div>
 
-        <Button variant="outline" className="text-lg">
+        <Button variant="outline">
           <span className="hidden md:inline">Preview</span>
           <PreviewIcon className="h-5 w-5 md:hidden" />
         </Button>

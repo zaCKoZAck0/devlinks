@@ -1,6 +1,6 @@
 export function PhoneMock({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className=" flex items-center justify-center relative">
       <svg
         width="286"
         height="612"

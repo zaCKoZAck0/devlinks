@@ -24,7 +24,6 @@ export function NavLink({ children, value }: NavLinkProps) {
     <Button
       onClick={setView}
       variant={dashboardView === value ? "secondary" : "ghost"}
-      className="text-lg"
     >
       {children}
     </Button>
