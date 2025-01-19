@@ -15,6 +15,7 @@ import {
 import { Input } from "~/components/ui/input";
 
 import { EmailIcon, PasswordIcon } from "~/components/icon/form";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z
@@ -90,9 +91,9 @@ export default function LoginPage() {
           </Button>
           <p className="text-center">
             Don’t have an account?{" "}
-            <a className="text-primary" href="/create-account">
+            <Link className="text-primary" href="/create-account">
               Create account
-            </a>
+            </Link>
           </p>
         </form>
       </Form>
